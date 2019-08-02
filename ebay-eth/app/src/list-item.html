@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去中心化电商平台</title>
+    <!-- <link rel="stylesheet" type='text/css' href="/app/stylesheets/app.css"> -->
+    <!-- <script type="text/javascript" src="javasripts/jquery-1.12.4.min.js"></script> -->
+    <script type="text/javascript" src="index.js"></script>
+    <base href="/">
+</head>
+<body>
+<div class="top_header">
+    <h2>eBay电商平台</h2>
+</div>
+
+<div class="center_wrap">
+    <h2 class="list_title notop"><span>商品信息</span>span></h2>
+    <form class="add_form" id="add-item-to-store">
+        <div class="form_group ">
+            <label>Name</label>
+            <input type="text" name="product-name" id="product-name" placeholder="iPhone, Jeans, shoes etc"
+                   required="required"></input>
+        </div>
+        <div class="form_group">
+            <label>Description</label>
+            <textarea name="product-description" id="product-description"
+                      placeholder="Enter detailed product description" required="required"></textarea>
+        </div>
+        <div class="form_group">
+            <label>Upload product photo</label>
+            <input type="file" name="product-image" id="product-image" required="required" class="noborder">
+        </div>
+        <div class="form_group">
+            <label>Category</label>
+            <select name="product-category" id="product-category">
+                <option>Art</option>
+                <option>Books</option>
+                <option>Cameras</option>
+                <option>Cell Phones & Accessories</option>
+                <option>Clothing</option>
+                <option>Coins & Paper Money</option>
+                <option>Collectibles</option>
+                <option>Computers/Tablets & Networking</option>
+                <option>Consumer Electronics</option>
+                <option>Crafts</option>
+                <option>DVDs & Movies</option>
+                <option>Entertainment Memorabilia</option>
+                <option>Gift Cards & Coupons</option>
+                <option>Music</option>
+                <option>Musical Instruments & Gear</option>
+                <option>Pet Supplies</option>
+                <option>Pottery & Glass</option>
+                <option>Sporting Goods</option>
+                <option>Stamps</option>
+                <option>Tickets</option>
+                <option>Toys & Hobbies</option>
+                <option>Video Games</option>
+            </select>
+        </div>
+        <div class="form_group">
+            <label>Start Price</label>
+            <input type="text" name="product-price" id="product-price" required="required">
+        </div>
+        <div class="form_group">
+            <label>Product Condition</label>
+            <select name="product-condition" id="product-condition">
+                <option value="1">New</option>
+                <option value="2">Used</option>
+            </select>
+        </div>
+        <div class="form_group">
+            <label>Auction Start Time</label>
+            <input type="datetime-local" name="product-auction-start" id="product-auction-start" required="required">
+        </div>
+        <div class="form_group">
+            <label>Days to run the auction</label>
+            <select class="form-control" name="product-auction-end" id="product-auction-end">
+                <option>1</option>
+                <option>3</option>
+                <option>5</option>
+                <option>7</option>
+                <option>10</option>
+            </select>
+        </div>
+        <div class="form_group">
+            <button type="submit" class="add_btn">Add Product To Store</button>
+        </div>
+    </form>
+</div>
+
+<div class="footer">
+    Copyright &copy; Mybid.com 2018,All Rights Reserved.
+</div>
+</body>
+</html>
+

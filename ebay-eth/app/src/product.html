@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去中心化电商平台</title>
+    <!-- <link rel="stylesheet" type='text/css' href="stylesheets/app.css"> -->
+    <!-- <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script> -->
+    <script type="text/javascript" src="index.js"></script>
+    <base href="/">
+</head>
+<body>
+<div class="top_header">
+    <h2>电子商店</h2>
+</div>
+
+<div class="center_wrap" id="product-details">
+    <div class="left_goods_show" id="product-image">
+        <!-- <左侧显示图片> -->
+    </div>
+    <div id="product-name"></div>
+    <div id="product-auction-end"></div>
+    <div id="product-desc" class="right_goods_data">
+        <h2>产品描述信息</h2>
+        <!-- 右侧显示描述 -->
+    </div>
+
+    <div class="right_goods_data">
+        <h3 id="product-name"><!-- 天梭TISSOT-杜鲁尔系列 T099.407.36.038.00 机械男表 --></h3>
+        <h4>起拍价格:<span id="product-price"></span></h4>
+        <h4>当前竞标人数:<span id="product-bids"></span></h4>
+        <form class="form_pannel" id="bidding">
+            <h5>你的竞标</h5>
+            <div class="form_group">
+                <label>竞标价格：</label>
+                <input type="text" placeholder="竞标价格>起拍价格" name="bid-amount" id="bid-amount">
+            </div>
+            <div class="form_group">
+                <label>迷惑价格（转账）：</label>
+                <input type="text" placeholder="迷惑价格>竞标价格" name="bid-send-amount" id="bid-send-amount">
+            </div>
+            <div class="form_group">
+                <label>密文：</label>
+                <input type="text" placeholder="随机密文" name="secret-text" id="secret-text">
+            </div>
+            <input type="hidden" name="product-id" id="product-id"/>
+            <input type="submit" value="提交竞标" class="input_sub">
+        </form>
+        <form class="form_pannel" id="revealing">
+            <h5>揭标按钮</h5>
+            <div class="form_group">
+                <label>竞标价格:</label>
+                <input type="text" placeholder="竞标价格>起拍价格" name="actual-amount" id="actual-amount">
+            </div>
+            <div class="form_group">
+                <label>密文:</label>
+                <input type="text" placeholder="随机密文" name="reveal-secret-text" id="reveal-secret-text">
+            </div>
+            <input type="hidden" name="product-id" id="product-id"/>
+            <input type="submit" value="开始揭标" class="input_sub">
+        </form>
+        <form id="finalize-auction">
+            <input type="hidden" name="product-id" id="product-id"/>
+            <input type="submit" class="finalize" value="Finalize Auction">
+        </form>
+    </div>
+
+</div>
+
+<div class="center_wrap">
+    <div class="left_con">
+        <h3>产品类别</h3>
+        <ul class="left_menu" id="categories">
+            <!-- <li><a href="#">electricity</a></li>
+            <li><a href="#">fashion</a></li>
+            <li><a href="#">furniture</a></li>
+            <li><a href="#">jewellery</a></li>
+            <li><a href="#">precious metal</a></li> -->
+        </ul>
+        <a href="index.html" class="add_goods noradius">回到主页</a>
+        <a href="list-item.html" class="add_goods">添加新商品</a>
+    </div>
+    <div class="right_con">
+        <h4 class="list_title notop"><span>拍卖详情</span></h4>
+        <div id="product-status">
+        </div>
+        <div id="escrow-info">
+            <div id="buyer"></div>
+            <div id="seller"></div>
+            <div id="arbiter"></div>
+            <div id="release-count"></div>
+            <div id="refund-count"></div>
+            <button id="release-funds" class="btn form-submit">向卖家付款</button>
+            <button id="refund-funds" class="btn form-submit">向买家退款</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    Copyright &copy; Mybid.com 2018,All Rights Reserved.
+</div>
+
+<div class="alert" id="msg"></div>
+</body>
+</html>
